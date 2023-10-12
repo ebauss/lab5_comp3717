@@ -42,8 +42,8 @@ fun main() {
     val dwarfHunt = Hunt(dwarf)
     val archerGather = Gather(elf)
     val archerHunt = Hunt(elf)
-    val orcGather = Gather(orc)
-    val orcHunt = Hunt(orc)
+    val orcGather = Gather(orc, Item.COMPASS)
+    val orcHunt = Hunt(orc, Item.MAP)
 
     humanGather.repeat(2, missionListener)
     humanHunt.repeat(2, missionListener)

@@ -1,7 +1,8 @@
 package com.example.lab5evonbausa
 
 abstract class Mission(
-    protected val minion: Minion
+    protected val minion: Minion,
+    protected val item: Item? = null
 ) {
 
     fun start(listener: MissionListener) {
