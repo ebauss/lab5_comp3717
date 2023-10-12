@@ -23,6 +23,11 @@ class Gather(minion: Minion, item: Item? = null) : Mission(minion, item), Repeat
     }
 
     override fun repeat(int: Int, listener: MissionListener) {
+        if (int > 3) {
+            println("A minion cannot repeat a gather more than 3 times! Repeating a gather 3 times...\n")
+        } else {
+            println("Repeating a gather $int times...\n")
+        }
         repeatNum = int
         repeat(repeatNum) {
             start(listener)
